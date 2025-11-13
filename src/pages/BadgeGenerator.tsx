@@ -24,6 +24,17 @@ export default function BadgeGenerator() {
     }
   };
 
+  useEffect(() => {
+  const font = new FontFace(
+    'Impact',
+    'url(https://fonts.cdnfonts.com/s/14569/impact.ttf)'
+  );
+  font.load().then((loadedFont) => {
+    document.fonts.add(loadedFont);
+  });
+}, []);
+
+
   const generateBadge = () => {
     if (!canvasRef.current || !profileImage) return;
 
