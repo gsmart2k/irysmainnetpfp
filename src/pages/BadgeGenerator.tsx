@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
 import { Upload, Download, Sparkles } from 'lucide-react';
+import mainnetcard from '@/assets/mainnetcard.png';
 
 export default function BadgeGenerator() {
   const [username, setUsername] = useState('');
@@ -33,7 +34,7 @@ export default function BadgeGenerator() {
 
     const badgeImg = new Image();
     badgeImg.crossOrigin = 'anonymous';
-    badgeImg.src = 'https://assets-gen.codenut.dev/lib/b71fce25-176e-49bb-929b-c4db27767877/irys mainnet card.png';
+    badgeImg.src = mainnetcard;
 
     badgeImg.onload = () => {
       // Set canvas size to match the badge
